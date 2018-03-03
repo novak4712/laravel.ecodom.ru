@@ -1,0 +1,75 @@
+.advantage {
+  padding: 50px 0;
+  background: url("../img/backkirpich.jpg")  fixed;
+  h3 {
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 50px;
+    color: $main-red;
+    @include md(font-size, 2rem);
+    @include sm(font-size, 1.6rem);
+  }
+  .items {
+    @include row-flex();
+    justify-content: center;
+    align-items: flex-start;
+    .item {
+      @include col();
+      @include size(6);
+      @include size-xs(12);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      border: 3px solid $main-red;
+      padding: 10px;
+      margin-bottom: 25px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 7px;
+      img {
+        width: 90px;
+        height: 90px;
+      }
+      .item_header {
+        flex-basis: 70%;
+        color: $white;
+        font-size: 1.5rem;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+        @include md(font-size, 1rem);
+        p {
+          width: 100%;
+        }
+        button {
+          background: $main-red;
+          font-size: 0.9rem;
+          @include md(font-size, 0.7rem);
+          margin-top: 10px;
+          height: 30px;
+          width: 110px;
+          border-radius: 7px;
+          outline-style: none;
+          color: $white;
+        }
+      }
+      .item_text {
+        width: 100%;
+        display: none;
+        color: $white;
+        margin-top: 10px;
+        p {
+          line-height: 20px;
+        }
+        h5 {
+          font-size: 1rem;
+          margin: 5px;
+          text-align: center;
+        }
+
+      }
+    }
+  }
+}

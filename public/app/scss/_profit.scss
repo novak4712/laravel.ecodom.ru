@@ -1,0 +1,38 @@
+.profit {
+  padding: 50px 0;
+  background: url("../img/backkirpich.jpg") fixed;
+
+  .items {
+    @include row-flex();
+    justify-content: center;
+    h2 {
+      width: 100%;
+      font-size: 3rem;
+      text-align: center;
+      padding-bottom: 50px;
+      color: $main-red;
+      @include md(font-size, 2rem);
+      @include sm(font-size, 1.6rem);
+
+    }
+    .item {
+      @include col();
+      @include size(3);
+      @include size-md(6);
+      @include size-xs(12);
+      text-align: center;
+      img {
+        margin: 20px;
+      }
+      p {
+        font-size: 1.4rem;
+        background: rgba(0, 0, 0, 0.6);
+        color: $white;
+        padding: 5px;
+        border-radius: 7px;
+        @include lg(font-size, 1.5rem);
+        @include md(font-size, 1.2rem);
+      }
+    }
+  }
+}

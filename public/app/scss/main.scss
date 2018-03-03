@@ -1,0 +1,30 @@
+@import "smart-grid";
+@import "config";
+@include reset();
+
+.debug {
+    display: block;
+    @include debug(rgba(0, 0, 0, 0.4), 0);
+}
+.container{
+	@include wrapper();
+}
+body{
+  font-family: $font-stack;
+  font-size: $f_s;
+}
+main{
+  background: url("../img/backkirpich.jpg") no-repeat fixed;
+}
+
+@import "header";
+@import "nav";
+@import "profit";
+@import "slider";
+@import "advantage";
+
+@import "gallery";
+@import "footer";
+@import "popup_toggle";
+@import "modal-form";
+@import "cart";

@@ -1,0 +1,114 @@
+.modal-form {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  width:320px;
+  height: 550px;
+  top:15%;
+  left:50%;
+  margin-left:-160px;
+  .smart-form {
+    background: $white;
+    border-radius: 7px;
+    width: 320px;
+    height: 550px;
+    z-index: 15;
+    .form-header {
+      background: $main-red;
+      border-bottom: 2px solid $dark-main-red;
+      padding: 5% 0;
+      font-size: 2rem;
+      border-radius: 7px;
+      color: $white;
+      display: flex;
+      span{
+        margin: 0 10px 0 auto;
+        font-size: 1.5rem;
+      }
+      i {
+        margin: 10px;
+      }
+    }
+    .form-body {
+      border-radius: 7px;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      .form-section {
+        display: flex;
+        flex-wrap: wrap;
+
+        label {
+          display: block;
+          width: 100%;
+
+          margin: 5px;
+        }
+        .prepend-icon {
+          border: 1px solid $silver;
+          border-radius: 5px;
+          width: 100%;
+          padding: 7px;
+          display: flex;
+          &:hover{
+            border: 1px solid $main-red;
+          }
+          input {
+            font-size: 1rem;
+            line-height: 20px;
+            border: none;
+            outline: none;
+            width: 100%;
+          }
+          textarea {
+            font-size: 1rem;
+            height: 100px;
+            border: none;
+            outline: none;
+            resize: none;
+            width: 100%;
+          }
+          span{
+            margin: 7px;
+            color: $silver;
+            align-self: flex-start;
+          }
+          span.select_fa{
+            color: $main-red;
+          }
+        }
+        .select_input{
+          border: 1px solid $main-red;
+        }
+      }
+    }
+    .form-footer {
+      background: #F5F5F5;
+      display: flex;
+      justify-content: center;
+      border-radius: 7px;
+      border-top: 2px solid $silver;
+      .button-form {
+        width: 50%;
+        height: 30px;
+        margin: 20px;
+        background: $main-red;
+        border-radius: 7px;
+        //border: 2px solid $dark-main-red;
+        color: $white;
+        outline: none;
+      }
+    }
+  }
+}
+.overlay_form{
+  display:none;
+  position:fixed;
+  z-index: 999;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  background:#000000;
+  opacity:0.8;
+}

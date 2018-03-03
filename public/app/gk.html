@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gulp Project</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="css/main.css" type="text/css"/>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<!--<div class="debug">-->
+<!--<div>-->
+<!--<div>-->
+<!--<div></div>-->
+<!--<div></div>-->
+<!--<div></div>-->
+<!--<div></div>-->
+<!--<div></div>-->
+<!--<div></div>-->
+<!--<div></div>-->
+<!--<div></div>-->
+<!--<div></div>-->
+<!--<div></div>-->
+<!--<div></div>-->
+<!--<div></div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<div class="overlay_form"></div>
+<section class="modal-form" id="popup1">
+    <div class="smart-form">
+        <div class="form-header">
+            <h4><i class="fa fa-comments"></i>Связаться</h4>
+        </div>
+        <form method="post" action="#" id="contact">
+            <div class="form-body">
+                <div class="form-section">
+                    <label for="names" class="field-label">Введите ваше имя</label>
+                    <div class="prepend-icon">
+                        <span class="field-icon"><i class="fa fa-user"></i></span>
+                        <input type="text" name="names" id="names" placeholder="имя">
+                    </div>
+                </div>
+                <div class="form-section">
+                    <label for="email" class="field-label">Введите ваш Email</label>
+                    <div class="prepend-icon">
+                        <span class="field-icon"><i class="fa fa-envelope"></i></span>
+                        <input type="email" name="email" id="email" placeholder="example@domain.com">
+                    </div>
+                </div>
+                <div class="form-section">
+                    <label for="tel" class="field-label">Введите ваш телефон</label>
+                    <div class="prepend-icon">
+                        <span class="field-icon"><i class="fa fa-phone-square"></i></span>
+                        <input type="tel" name="tel" id="tel" placeholder="номер телефона">
+                    </div>
+
+                </div>
+                <div class="form-section">
+                    <label for="comment" class="field-label">Задать вопрос</label>
+                    <div class="prepend-icon">
+                        <span class="field-icon"><i class="fa fa-comments"></i></span>
+                        <textarea class="comment" id="comment" name="comment"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="form-footer">
+                <input type="submit" name="modal_submit" value="Связаться" class="button-form">
+            </div>
+        </form>
+    </div>
+</section>
+
+<section class="modal-form" id="popup2">
+    <div class="smart-form">
+        <div class="form-header">
+            <h4><i class="fa fa-comments"></i>Заказать</h4>
+        </div>
+        <form method="post" action="#" id="order">
+            <div class="form-body">
+                <div class="form-section">
+                    <label for="names_order" class="field-label">Введите ваше имя</label>
+                    <div class="prepend-icon">
+                        <span class="field-icon"><i class="fa fa-user"></i></span>
+                        <input type="text" name="names_order" id="names_order" placeholder="имя">
+                    </div>
+                </div>
+                <div class="form-section">
+                    <label for="email_order" class="field-label">Введите ваш Email</label>
+                    <div class="prepend-icon">
+                        <span class="field-icon"><i class="fa fa-envelope"></i></span>
+                        <input type="email" name="email_order" id="email_order" placeholder="example@domain.com">
+                    </div>
+                </div>
+                <div class="form-section">
+                    <label for="tel_order" class="field-label">Введите ваш телефон</label>
+                    <div class="prepend-icon">
+                        <span class="field-icon"><i class="fa fa-phone-square"></i></span>
+                        <input type="tel" name="tel_order" id="tel_order" placeholder="номер телефона">
+                    </div>
+
+                </div>
+                <div class="form-section">
+                    <label for="comment" class="field-label">Введите № Гибкого каменя</label>
+                    <div class="prepend-icon">
+                        <input type="number" value="0" min="1">
+                    </div>
+                </div>
+                <div class="form-section">
+                    <label for="comment" class="field-label">Введите количество (в листах)</label>
+                    <div class="prepend-icon">
+                        <input type="number" value="0" min="1">
+                    </div>
+                </div>
+            </div>
+            <div class="form-footer">
+                <input type="submit" name="modal_submit_cart_gk" value="заказать" class="button-form">
+            </div>
+        </form>
+    </div>
+</section>
+
+
+<header>
+    <nav class="menu">
+        <div class="logo">
+            <img src="img/logo3.png" alt="логотип">
+        </div>
+        <div class="menu__icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="menu__links">
+            <a class="menu__links-item" href="index.html">Главная</a>
+            <a class="menu__links-item menu__links-item-active" href="#">Гибкий камень</a>
+            <a class="menu__links-item" href="tp.html">Термопанели</a>
+            <a class="menu__links-item" href="gallery.html">Фотогалерея</a>
+            <a class="menu__links-item" href="#contact_footer">Контакты</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="cart container">
+        <div class="items">
+            <div class="item">
+                <div class="cart_header">
+                    <img src="img/gk_1.png" alt="icon">
+                </div>
+                <div class="cart_body">
+                    <div class="cart_text">
+                        <h6>
+                            Гибкий камень №1
+                        </h6>
+                        <p>
+                            Ширина: 0,3 м.</br>
+                            Длина: 0,6 м.</br>
+                            Толщина: 1,5-2 мм</br>
+                            Упаковка: 3,6м2 (20 листов)</br>
+                        </p>
+                    </div>
+                    <div class="cart_price">
+                        <p>899 руб.</p>
+                        <p>за м. кв.</p>
+                        <button class="cart_toggle" rel="popup2">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="cart_header">
+                    <img src="img/gk_2.png" alt="icon">
+                </div>
+                <div class="cart_body">
+                    <div class="cart_text">
+                        <h6>
+                            Гибкий камень №2
+                        </h6>
+                        <p>
+                            Ширина: 0,3 м.</br>
+                            Длина: 0,6 м.</br>
+                            Толщина: 1,5-2 мм</br>
+                            Упаковка: 3,6м2 (20 листов)</br>
+                        </p>
+                    </div>
+                    <div class="cart_price">
+                        <p>899 руб.</p>
+                        <p>за м. кв.</p>
+                        <button class="cart_toggle" rel="popup2">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="cart_header">
+                    <img src="img/gk_3.png" alt="icon">
+                </div>
+                <div class="cart_body">
+                    <div class="cart_text">
+                        <h6>
+                            Гибкий камень №3
+                        </h6>
+                        <p>
+                            Ширина: 0,3 м.</br>
+                            Длина: 0,6 м.</br>
+                            Толщина: 1,5-2 мм</br>
+                            Упаковка: 3,6м2 (20 листов)</br>
+                        </p>
+                    </div>
+                    <div class="cart_price">
+                        <p>899 руб.</p>
+                        <p>за м. кв.</p>
+                        <button class="cart_toggle" rel="popup2">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="cart_header">
+                    <img src="img/gk_4.png" alt="icon">
+                </div>
+                <div class="cart_body">
+                    <div class="cart_text">
+                        <h6>
+                            Гибкий камень №4
+                        </h6>
+                        <p>
+                            Ширина: 0,3 м.</br>
+                            Длина: 0,6 м.</br>
+                            Толщина: 1,5-2 мм</br>
+                            Упаковка: 3,6м2 (20 листов)</br>
+                        </p>
+                    </div>
+                    <div class="cart_price">
+                        <p>899 руб.</p>
+                        <p>за м. кв.</p>
+                        <button class="cart_toggle" rel="popup2">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="cart_header">
+                    <img src="img/gk_5.png" alt="icon">
+                </div>
+                <div class="cart_body">
+                    <div class="cart_text">
+                        <h6>
+                            Гибкий камень №5
+                        </h6>
+                        <p>
+                            Ширина: 0,3 м.</br>
+                            Длина: 0,6 м.</br>
+                            Толщина: 1,5-2 мм</br>
+                            Упаковка: 3,6м2 (20 листов)</br>
+                        </p>
+                    </div>
+                    <div class="cart_price">
+                        <p>899 руб.</p>
+                        <p>за м. кв.</p>
+                        <button class="cart_toggle" rel="popup2">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="cart_header">
+                    <img src="img/gk_6.png" alt="icon">
+                </div>
+                <div class="cart_body">
+                    <div class="cart_text">
+                        <h6>
+                            Гибкий камень №6
+                        </h6>
+                        <p>
+                            Ширина: 0,3 м.</br>
+                            Длина: 0,6 м.</br>
+                            Толщина: 1,5-2 мм</br>
+                            Упаковка: 3,6м2 (20 листов)</br>
+                        </p>
+                    </div>
+                    <div class="cart_price">
+                        <p>899 руб.</p>
+                        <p>за м. кв.</p>
+                        <button class="cart_toggle" rel="popup2">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="cart_header">
+                    <img src="img/gk_7.png" alt="icon">
+                </div>
+                <div class="cart_body">
+                    <div class="cart_text">
+                        <h6>
+                            Гибкий камень №7
+                        </h6>
+                        <p>
+                            Ширина: 0,3 м.</br>
+                            Длина: 0,6 м.</br>
+                            Толщина: 1,5-2 мм</br>
+                            Упаковка: 3,6м2 (20 листов)</br>
+                        </p>
+                    </div>
+                    <div class="cart_price">
+                        <p>899 руб.</p>
+                        <p>за м. кв.</p>
+                        <button class="cart_toggle" rel="popup2">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="cart_header">
+                    <img src="img/gk_8.png" alt="icon">
+                </div>
+                <div class="cart_body">
+                    <div class="cart_text">
+                        <h6>
+                            Гибкий камень №8
+                        </h6>
+                        <p>
+                            Ширина: 0,3 м.</br>
+                            Длина: 0,6 м.</br>
+                            Толщина: 1,5-2 мм</br>
+                            Упаковка: 3,6м2 (20 листов)</br>
+                        </p>
+                    </div>
+                    <div class="cart_price">
+                        <p>899 руб.</p>
+                        <p>за м. кв.</p>
+                        <button class="cart_toggle" rel="popup2">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="cart_header">
+                    <img src="img/gk_9.png" alt="icon">
+                </div>
+                <div class="cart_body">
+                    <div class="cart_text">
+                        <h6>
+                            Гибкий камень №9
+                        </h6>
+                        <p>
+                            Ширина: 0,3 м.</br>
+                            Длина: 0,6 м.</br>
+                            Толщина: 1,5-2 мм</br>
+                            Упаковка: 3,6м2 (20 листов)</br>
+                        </p>
+                    </div>
+                    <div class="cart_price">
+                        <p>899 руб.</p>
+                        <p>за м. кв.</p>
+                        <button class="cart_toggle" rel="popup2">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="cart_header">
+                    <img src="img/gk_10.png" alt="icon">
+                </div>
+                <div class="cart_body">
+                    <div class="cart_text">
+                        <h6>
+                            Гибкий камень №10
+                        </h6>
+                        <p>
+                            Ширина: 0,3 м.</br>
+                            Длина: 0,6 м.</br>
+                            Толщина: 1,5-2 мм</br>
+                            Упаковка: 3,6м2 (20 листов)</br>
+                        </p>
+                    </div>
+                    <div class="cart_price">
+                        <p>899 руб.</p>
+                        <p>за м. кв.</p>
+                        <button class="cart_toggle" rel="popup2">Заказать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer id="contact_footer">
+    <div class="cooperation">
+        Напишите нам!</br>
+        Приглашаем к сотрудничеству!</br>
+        Оставьте свой телефон и мы обязательно с вами свяжемся!</br>
+    </div>
+    <div class="cont_email">
+        <div class="email">eco_dom_nv@mail.ru</div>
+    </div>
+    <div class="telefon">
+        <p>+7 (950) 526-83-52</p>
+        <div class="line"></div>
+        <p>+7 (982) 577-39-83</p>
+        <p class="adress">г.Нижневартовск пос. Беловежский д.21</p>
+    </div>
+</footer>
+<a href="#" id="popup__toggle" rel="popup1">
+    <div class="circlephone" style="transform-origin: center;"></div>
+    <div class="circle-fill" style="transform-origin: center;"></div>
+    <div class="img-circle" style="transform-origin: center;">
+        <div class="img-circleblock" style="transform-origin: center;"></div>
+    </div>
+
+</a>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script defer src="js/jquery.flexslider.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>

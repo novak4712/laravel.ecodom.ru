@@ -1,0 +1,12 @@
+.gallery{
+  width: 100%;
+  background: $white;
+  padding-top: 100px;
+
+}
+svg.polaroid rect{
+  stroke: $main-red;
+}
+#photostack-1 nav span.current{
+  background: $main-red;
+}

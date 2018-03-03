@@ -1,0 +1,50 @@
+footer {
+  background: url("../img/rk-security-sytems-background-1.jpg");
+  display: flex;
+  flex-wrap: wrap;
+  .cont_email {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .email {
+      background: $main-red;
+      color: $white;
+      font-size: 2rem;
+      margin: 50px 0 30px 0;
+      padding: 0 10px;
+      width: 320px;
+      text-align: center;
+      line-height: 50px;
+      border-radius: 7px;
+    }
+  }
+  .telefon{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    p{
+      color: $white;
+      font-size: 1.5rem;
+      padding: 20px;
+      text-align: center;
+    }
+    .line{
+      border: 1px solid $white;
+      height: 40px;
+      @include xs (display, none);
+    }
+    .adress{
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+  .cooperation{
+    width: 100%;
+    text-align: center;
+    color: $white;
+    font-size: 1.5rem;
+    margin-top: 80px;
+  }
+}
