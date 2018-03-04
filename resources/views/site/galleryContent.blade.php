@@ -1,4 +1,4 @@
-<section class="gallery">
+<section class="gallery" id="gallery">
 
     <div class="description">
         <svg xmlns="http://www.w3.org/2000/svg" width="400px" height="100px" class="polaroid" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1000 300">
@@ -9,52 +9,52 @@
     <section id="photostack-1" class="photostack photostack-start">
         <div>
             <figure>
-                <img src="img/gal1.jpeg" alt="img01"/>
+                <img src="{{ asset('app/img/gal1.jpeg') }}" alt="img01"/>
             </figure>
             <figure>
-                <img src="img/gal2.jpg" alt="img02"/>
+                <img src="{{ asset('app/img/gal2.jpg') }}" alt="img02"/>
             </figure>
             <figure>
-                <img src="img/gal3.jpg" alt="img03"/>
+                <img src="{{ asset('app/img/gal3.jpg') }}" alt="img03"/>
             </figure>
             <figure>
-                <img src="img/gal4.jpg" alt="img04"/>
+                <img src="{{ asset('app/img/gal4.jpg') }}" alt="img04"/>
             </figure>
             <figure>
-                <img src="img/gal5.jpg" alt="img05"/>
+                <img src="{{ asset('app/img/gal5.jpg') }}" alt="img05"/>
             </figure>
             <figure>
-                <img src="img/gal6.jpg" alt="img06"/>
+                <img src="{{ asset('app/img/gal6.jpg') }}" alt="img06"/>
             </figure>
             <figure data-dummy>
-                <img src="img/gal7.jpg" alt="img07"/>
+                <img src="{{ asset('app/img/gal7.jpg') }}" alt="img07"/>
             </figure>
             <figure data-dummy>
-                <img src="img/gal8.jpg" alt="img08"/>
+                <img src="{{ asset('app/img/gal8.jpg') }}" alt="img08"/>
             </figure>
             <figure data-dummy>
-                <img src="img/gal9.jpg" alt="img09"/>
+                <img src="{{ asset('app/img/gal9.jpg') }}" alt="img09"/>
             </figure>
             <figure data-dummy>
-                <img src="img/gal10.jpg" alt="img10"/>
+                <img src="{{ asset('app/img/gal10.jpg') }}" alt="img10"/>
             </figure>
             <figure data-dummy>
-                <img src="img/gal11.jpg" alt="img11"/>
+                <img src="{{ asset('app/img/gal11.jpg') }}" alt="img11"/>
             </figure>
             <figure data-dummy>
-                <img src="img/gal12.jpg" alt="img12"/>
+                <img src="{{ asset('app/img/gal12.jpg') }}" alt="img12"/>
             </figure>
             <figure data-dummy>
-                <img src="img/gal13.jpg" alt="img13"/></a>
+                <img src="{{ asset('app/img/gal13.jpg') }}" alt="img13"/></a>
             </figure>
             <figure data-dummy>
-                <img src="img/gal14.jpg" alt="img14"/></a>
+                <img src="{{ asset('app/img/gal14.jpg') }}" alt="img14"/></a>
             </figure>
             <figure data-dummy>
-                <img src="img/gal15.jpg" alt="img15"/></a>
+                <img src="{{ asset('app/img/gal15.jpg') }}" alt="img15"/></a>
             </figure>
             <figure data-dummy>
-                <img src="img/gal16.jpg" alt="img16"/></a>
+                <img src="{{ asset('app/img/gal16.jpg') }}" alt="img16"/></a>
             </figure>
         </div>
     </section>

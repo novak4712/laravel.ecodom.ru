@@ -27,7 +27,7 @@ class IndexController extends Controller
                 'comment' => 'required',
             ], $messages);
 //            dump($request);
-            $data= $request->all();
+//            $data= $request->all();
 
         }
 

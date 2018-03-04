@@ -69,7 +69,7 @@
     </section>
 
 @endif
-
+@include('site.galleryContent')
 <section class="map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62012.60396116427!2d76.44290987574828!3d60.94101270400136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x436d3ea933d05687%3A0xd611216bd7fa542d!2z0J3QuNC20L3QtdCy0LDRgNGC0L7QstGB0LosINCl0LDQvdGC0Yst0JzQsNC90YHQuNC50YHQutC40Lkg0LDQstGC0L7QvdC-0LzQvdGL0Lkg0L7QutGA0YPQsywg0KDQvtGB0YHQuNGP!5e0!3m2!1sru!2sby!4v1518263924692"
             width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
