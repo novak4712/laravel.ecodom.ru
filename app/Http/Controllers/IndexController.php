@@ -14,6 +14,27 @@ class IndexController extends Controller
     //
     public function execute(Request $request)
     {
+
+
+        $messages = [
+            'required' => "Поля :attribute обязательно к заполнению",
+            'email' => "Поля :attribute должно соответствовать email адресу",
+        ];
+        if($request->isMethod('post')){
+            $this->validate($request, [
+                'names' => 'required|max:255',
+                'email'=> 'required|email',
+                'tel' => 'required',
+                'comment' => 'required',
+            ], $messages);
+
+            $data = $request->all();
+            //mail
+
+        }
+
+
+
         $pages = Page::all();
         $profit = Profit::all();
         $advantage = Advantage::all();

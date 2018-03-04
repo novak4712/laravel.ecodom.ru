@@ -39,7 +39,7 @@
     @yield('contactButton')
 </a>
 
-<header>
+<header id = "index">
     @yield('header')
 </header>
 

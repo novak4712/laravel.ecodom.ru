@@ -2,7 +2,7 @@
     <div class="form-header">
         <h4><i class="fa fa-comments"></i>Связаться</h4>
     </div>
-    <form method="post" action="#" id="contact">
+    <form  action="{{ route('index') }}" method="post" id="contact">
         <div class="form-body">
             <div class="form-section">
                 <label for="names" class="field-label">Введите ваше имя</label>
@@ -37,5 +37,8 @@
         <div class="form-footer">
             <input type="submit" name="modal_submit" value="Связаться" class="button-form">
         </div>
+
+        {{ csrf_field() }}
+
     </form>
 </div>
