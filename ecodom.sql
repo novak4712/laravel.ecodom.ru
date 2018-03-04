@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Мар 04 2018 г., 10:18
+-- Время создания: Мар 04 2018 г., 11:32
 -- Версия сервера: 5.7.20
 -- Версия PHP: 7.0.26
 
@@ -100,6 +100,17 @@ CREATE TABLE `pages` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `pages`
+--
+
+INSERT INTO `pages` (`id`, `name`, `link`, `created_at`, `updated_at`) VALUES
+(1, 'Главная', '#', NULL, NULL),
+(2, 'Гибкий камень', 'gk.html', NULL, NULL),
+(3, 'Термопанели', 'tp.html', NULL, NULL),
+(4, 'Фотогалерея', 'gallery.html', NULL, NULL),
+(5, 'Контакты', '#contact_footer', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -247,7 +258,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT для таблицы `pages`
 --
 ALTER TABLE `pages`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT для таблицы `profit`

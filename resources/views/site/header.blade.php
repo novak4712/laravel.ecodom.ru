@@ -12,12 +12,12 @@
         </div>
 
         <div class="menu__links">
+            @foreach($menu as $item)
 
-            <a class="menu__links-item menu__links-item-active" href="#">Главная</a>
-            <a class="menu__links-item" href="gk.html">Гибкий камень</a>
-            <a class="menu__links-item" href="tp.html">Термопанели</a>
-            <a class="menu__links-item" href="gallery.html">Фотогалерея</a>
-            <a class="menu__links-item" href="#contact_footer">Контакты</a>
+            <a class="menu__links-item" href="{{ $item['link'] }}">{{ $item['title'] }}</a>
+
+            @endforeach
+
         </div>
     </nav>
 

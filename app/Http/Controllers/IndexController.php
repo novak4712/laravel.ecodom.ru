@@ -25,8 +25,6 @@ class IndexController extends Controller
             $item = array('title' => $page->name, 'link' => $page->link);
             array_push($menu, $item);
         }
-        $item = array('title' => 'Contact', 'link' => 'contact_footer');
-        array_push($menu, $item);
 
         return view('site.index', array(
             'menu' => $menu,
