@@ -35,8 +35,8 @@ $(document).ready(function () {
         var hBlock = $(".text1");
         $(this).text(hBlock.is(":visible") ? "Подробние" : "Скрыть");
         hBlock.toggle("slow");
-        var srcR = "img/ogon_r.png";
-        var srcW = "img/ogon_w.png";
+        var srcR = "app/img/ogon_r.png";
+        var srcW = "app/img/ogon_w.png";
         var src = $(".img_but1").attr("src");
         if (src === srcW) {
             $(".img_but1").attr("src", srcR);
@@ -46,8 +46,8 @@ $(document).ready(function () {
 
     });
     $(".img_item1").hover(function () {
-        var srcR = "img/ogon_r.png";
-        var srcW = "img/ogon_w.png";
+        var srcR = "app/img/ogon_r.png";
+        var srcW = "app/img/ogon_w.png";
         var src = $(".img_but1").attr("src");
         if (src === srcW) {
             $(".img_but1").attr("src", srcR);
@@ -60,8 +60,8 @@ $(document).ready(function () {
         var hBlock = $(".text2");
         $(this).text(hBlock.is(":visible") ? "Подробние" : "Скрыть");
         hBlock.toggle("slow");
-        var srcR = "img/graz_r.png";
-        var srcW = "img/graz_w.png";
+        var srcR = "app/img/graz_w.png";
+        var srcW = "app/img/graz_r.png";
         var src = $(".img_but2").attr("src");
         if (src === srcW) {
             $(".img_but2").attr("src", srcR);
@@ -70,8 +70,8 @@ $(document).ready(function () {
         }
     });
     $(".img_item2").hover(function () {
-        var srcR = "img/graz_r.png";
-        var srcW = "img/graz_w.png";
+        var srcR = "app/img/graz_w.png";
+        var srcW = "app/img/graz_r.png";
         var src = $(".img_but2").attr("src");
         if (src === srcW) {
             $(".img_but2").attr("src", srcR);
@@ -84,8 +84,8 @@ $(document).ready(function () {
         var hBlock = $(".text3");
         $(this).text(hBlock.is(":visible") ? "Подробние" : "Скрыть");
         hBlock.toggle("slow");
-        var srcR = "img/solnz_r.png";
-        var srcW = "img/solnz_w.png";
+        var srcR = "app/img/solnz_w.png";
+        var srcW = "app/img/solnz_r.png";
         var src = $(".img_but3").attr("src");
         if (src === srcW) {
             $(".img_but3").attr("src", srcR);
@@ -94,8 +94,8 @@ $(document).ready(function () {
         }
     });
     $(".img_item3").hover(function () {
-        var srcR = "img/solnz_r.png";
-        var srcW = "img/solnz_w.png";
+        var srcR = "app/img/solnz_w.png";
+        var srcW = "app/img/solnz_r.png";
         var src = $(".img_but3").attr("src");
         if (src === srcW) {
             $(".img_but3").attr("src", srcR);
@@ -108,8 +108,8 @@ $(document).ready(function () {
         var hBlock = $(".text4");
         $(this).text(hBlock.is(":visible") ? "Подробние" : "Скрыть");
         hBlock.toggle("slow");
-        var srcR = "img/tresh_r.png";
-        var srcW = "img/tresh_w.png";
+        var srcR = "app/img/tresh_w.png";
+        var srcW = "app/img/tresh_r.png";
         var src = $(".img_but4").attr("src");
         if (src === srcW) {
             $(".img_but4").attr("src", srcR);
@@ -118,8 +118,8 @@ $(document).ready(function () {
         }
     });
     $(".img_item4").hover(function () {
-        var srcR = "img/tresh_r.png";
-        var srcW = "img/tresh_w.png";
+        var srcR = "app/img/tresh_w.png";
+        var srcW = "app/img/tresh_r.png";
         var src = $(".img_but4").attr("src");
         if (src === srcW) {
             $(".img_but4").attr("src", srcR);
@@ -132,8 +132,8 @@ $(document).ready(function () {
         var hBlock = $(".text5");
         $(this).text(hBlock.is(":visible") ? "Подробние" : "Скрыть");
         hBlock.toggle("slow");
-        var srcR = "img/prohee_r.png";
-        var srcW = "img/prohee_w.png";
+        var srcR = "app/img/prohee_w.png";
+        var srcW = "app/img/prohee_r.png";
         var src = $(".img_but5").attr("src");
         if (src === srcW) {
             $(".img_but5").attr("src", srcR);
@@ -142,8 +142,8 @@ $(document).ready(function () {
         }
     });
     $(".img_item5").hover(function () {
-        var srcR = "img/prohee_r.png";
-        var srcW = "img/prohee_w.png";
+        var srcR = "app/img/prohee_w.png";
+        var srcW = "app/img/prohee_r.png";
         var src = $(".img_but5").attr("src");
         if (src === srcW) {
             $(".img_but5").attr("src", srcR);

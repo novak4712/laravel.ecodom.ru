@@ -1,22 +1,28 @@
-<nav class="menu">
-    <div class="logo">
-        <img src="{{ asset('app/img/logo3.png') }}" alt="логотип">
-    </div>
-    <div class="menu__icon">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+@if(isset($menu))
 
-    <div class="menu__links">
-        <a class="menu__links-item menu__links-item-active" href="#">Главная</a>
-        <a class="menu__links-item" href="gk.html">Гибкий камень</a>
-        <a class="menu__links-item" href="tp.html">Термопанели</a>
-        <a class="menu__links-item" href="gallery.html">Фотогалерея</a>
-        <a class="menu__links-item" href="#contact_footer">Контакты</a>
-    </div>
-</nav>
+    <nav class="menu">
+        <div class="logo">
+            <img src="{{ asset('app/img/logo3.png') }}" alt="логотип">
+        </div>
+        <div class="menu__icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="menu__links">
+
+            <a class="menu__links-item menu__links-item-active" href="#">Главная</a>
+            <a class="menu__links-item" href="gk.html">Гибкий камень</a>
+            <a class="menu__links-item" href="tp.html">Термопанели</a>
+            <a class="menu__links-item" href="gallery.html">Фотогалерея</a>
+            <a class="menu__links-item" href="#contact_footer">Контакты</a>
+        </div>
+    </nav>
+
+@endif
+
 <section class="fullscreen-bg">
     <div class="overlay">
         <div class="container">

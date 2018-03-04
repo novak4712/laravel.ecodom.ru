@@ -20,6 +20,21 @@ class IndexController extends Controller
         $gk = Gk::all();
         $tp = Tp::all();
 
-        return view('site.index');
+        $menu = array();
+        foreach ($pages as $page) {
+            $item = array('title' => $page->name, 'link' => $page->link);
+            array_push($menu, $item);
+        }
+        $item = array('title' => 'Contact', 'link' => 'contact_footer');
+        array_push($menu, $item);
+
+        return view('site.index', array(
+            'menu' => $menu,
+            'pages' => $pages,
+            'profit' => $profit,
+            'advantage' => $advantage,
+            'gk' => $gk,
+            'tp' => $tp,
+        ));
     }
 }
