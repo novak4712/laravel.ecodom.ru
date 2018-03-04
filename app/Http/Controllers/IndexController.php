@@ -8,31 +8,28 @@ use App\Profit;
 use App\Advantage;
 use App\Gk;
 use App\Tp;
+use Mail;
 
 class IndexController extends Controller
 {
     //
     public function execute(Request $request)
     {
-
-
         $messages = [
             'required' => "Поля :attribute обязательно к заполнению",
             'email' => "Поля :attribute должно соответствовать email адресу",
         ];
-        if($request->isMethod('post')){
+        if ($request->isMethod('post')) {
             $this->validate($request, [
                 'names' => 'required|max:255',
-                'email'=> 'required|email',
-                'tel' => 'required',
+                'email' => 'required|email',
+                'tel' => 'required|max:255',
                 'comment' => 'required',
             ], $messages);
-
-            $data = $request->all();
-            //mail
+//            dump($request);
+            $data= $request->all();
 
         }
-
 
 
         $pages = Page::all();

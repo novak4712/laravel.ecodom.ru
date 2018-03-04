@@ -29,18 +29,20 @@
             <div class="form-section">
                 <label for="comment" class="field-label">Введите № Гибкого каменя</label>
                 <div class="prepend-icon">
-                    <input type="number" value="0" min="1">
+                    <input type="number" value="0" min="1" name="label_gk">
                 </div>
             </div>
             <div class="form-section">
                 <label for="comment" class="field-label">Введите количество (в листах)</label>
                 <div class="prepend-icon">
-                    <input type="number" value="0" min="1">
+                    <input type="number" value="0" min="1" name="count_gk">
                 </div>
             </div>
         </div>
         <div class="form-footer">
             <input type="submit" name="modal_submit_cart_gk" value="заказать" class="button-form">
         </div>
+
+        {{ csrf_field() }}
     </form>
 </div>
