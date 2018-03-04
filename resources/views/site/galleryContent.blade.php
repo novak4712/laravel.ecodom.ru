@@ -45,16 +45,16 @@
                 <img src="{{ asset('app/img/gal12.jpg') }}" alt="img12"/>
             </figure>
             <figure data-dummy>
-                <img src="{{ asset('app/img/gal13.jpg') }}" alt="img13"/></a>
+                <img src="{{ asset('app/img/gal13.jpg') }}" alt="img13"/>
             </figure>
             <figure data-dummy>
-                <img src="{{ asset('app/img/gal14.jpg') }}" alt="img14"/></a>
+                <img src="{{ asset('app/img/gal14.jpg') }}" alt="img14"/>
             </figure>
             <figure data-dummy>
-                <img src="{{ asset('app/img/gal15.jpg') }}" alt="img15"/></a>
+                <img src="{{ asset('app/img/gal15.jpg') }}" alt="img15"/>
             </figure>
             <figure data-dummy>
-                <img src="{{ asset('app/img/gal16.jpg') }}" alt="img16"/></a>
+                <img src="{{ asset('app/img/gal16.jpg') }}" alt="img16"/>
             </figure>
         </div>
     </section>
