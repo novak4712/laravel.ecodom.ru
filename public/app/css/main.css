@@ -642,9 +642,34 @@ main {
           border-radius: 7px;
 }
 
-.advantage .items .item img {
+.advantage .items .item .img_1 {
   width: 90px;
   height: 90px;
+  background: url("../img/ogon_w.png");
+}
+
+.advantage .items .item .img_2 {
+  width: 90px;
+  height: 90px;
+  background: url("../img/graz_w.png");
+}
+
+.advantage .items .item .img_3 {
+  width: 90px;
+  height: 90px;
+  background: url("../img/solnz_w.png");
+}
+
+.advantage .items .item .img_4 {
+  width: 90px;
+  height: 90px;
+  background: url("../img/tresh_w.png");
+}
+
+.advantage .items .item .img_5 {
+  width: 90px;
+  height: 90px;
+  background: url("../img/prohee_w.png");
 }
 
 .advantage .items .item .item_header {
@@ -702,6 +727,26 @@ main {
   font-size: 1rem;
   margin: 5px;
   text-align: center;
+}
+
+.advantage .items .item.img_item1:hover .img_1 {
+  background: url("../img/ogon_r.png");
+}
+
+.advantage .items .item.img_item2:hover .img_2 {
+  background: url("../img/graz_r.png");
+}
+
+.advantage .items .item.img_item3:hover .img_3 {
+  background: url("../img/solnz_r.png");
+}
+
+.advantage .items .item.img_item4:hover .img_4 {
+  background: url("../img/tresh_r.png");
+}
+
+.advantage .items .item.img_item5:hover .img_5 {
+  background: url("../img/prohee_r.png");
 }
 
 .gallery {

@@ -54,7 +54,7 @@
             <div class="items">
                 @foreach($advantage as $k=>$advan)
                     <div class="item img_item{{$advan->id}}">
-                        {!! Html::image('app/img/'.$advan->icon1) !!}
+                        <div class="img_{{$advan->id}}"></div>
                         <div class="item_header">
                             {!! $advan->name !!}
                             <button class="read_more but{{$advan->id}}">Подробнее</button>
