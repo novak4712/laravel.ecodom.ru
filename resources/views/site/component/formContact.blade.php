@@ -9,21 +9,21 @@
                 <label for="names" class="field-label">Введите ваше имя</label>
                 <div class="prepend-icon">
                     <span class="field-icon"><i class="fa fa-user"></i></span>
-                    <input type="text" name="names" id="names" placeholder="имя">
+                    <input type="text" name="names" id="names" placeholder="имя" required>
                 </div>
             </div>
             <div class="form-section">
                 <label for="email" class="field-label">Введите ваш Email</label>
                 <div class="prepend-icon">
                     <span class="field-icon"><i class="fa fa-envelope"></i></span>
-                    <input type="email" name="email" id="email" placeholder="example@domain.com">
+                    <input type="email" name="email" id="email" placeholder="example@domain.com" required>
                 </div>
             </div>
             <div class="form-section">
                 <label for="tel" class="field-label">Введите ваш телефон</label>
                 <div class="prepend-icon">
                     <span class="field-icon"><i class="fa fa-phone-square"></i></span>
-                    <input type="tel" name="tel" id="tel" placeholder="номер телефона">
+                    <input type="tel" name="tel" id="tel" placeholder="номер телефона" required>
                 </div>
 
             </div>
@@ -31,7 +31,7 @@
                 <label for="comment" class="field-label">Задать вопрос</label>
                 <div class="prepend-icon">
                     <span class="field-icon"><i class="fa fa-comments"></i></span>
-                    <textarea class="comment" id="comment" name="comment"></textarea>
+                    <textarea class="comment" id="comment" name="comment" required></textarea>
                 </div>
             </div>
         </div>
