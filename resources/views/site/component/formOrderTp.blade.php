@@ -1,3 +1,4 @@
+<section class="modal-form" id="popup3">
 <div class="smart-form">
     <div class="form-header">
         <h4><i class="fa fa-comments"></i>Заказать</h4>
@@ -27,15 +28,15 @@
 
             </div>
             <div class="form-section">
-                <label for="comment" class="field-label">Введите № Гибкого каменя</label>
+                <label for="comment" class="field-label">Введите № Термопанели</label>
                 <div class="prepend-icon">
-                    <input type="number" value="0" min="1" name="label_gk">
+                    <input type="number" value="0" min="1" name="label_tp">
                 </div>
             </div>
             <div class="form-section">
                 <label for="comment" class="field-label">Введите количество (в листах)</label>
                 <div class="prepend-icon">
-                    <input type="number" value="0" min="1" name="count_gk">
+                    <input type="number" value="0" min="1" name="count_tp">
                 </div>
             </div>
         </div>
@@ -46,3 +47,4 @@
         {{ csrf_field() }}
     </form>
 </div>
+</section>

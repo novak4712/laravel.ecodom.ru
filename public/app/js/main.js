@@ -4,13 +4,6 @@ $(document).ready(function () {
         $(this).closest(".menu").toggleClass("menu_state_open");
     });
 
-    $(".menu__links-item").on("click", function () {
-        $(".menu__links-item").each(function () {
-            $(this).removeClass("menu__links-item-active")
-        });
-        $(this).toggleClass("menu__links-item-active");
-    });
-
     $(".form-section").on("click", ".prepend-icon", function () {
         $(".prepend-icon").each(function () {
             $(this).removeClass("select_input")

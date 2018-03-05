@@ -4,19 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Page;
-use App\Profit;
-use App\Advantage;
-
-
-class IndexController extends Controller
+class GalleryController extends Controller
 {
     //
-    public function execute(Request $request)
-    {
+    public function execute(Request $request){
 
         $pages = Page::all();
-        $profit = Profit::all();
-        $advantage = Advantage::all();
 
         $menu = array();
         foreach ($pages as $page) {
@@ -24,11 +17,10 @@ class IndexController extends Controller
             array_push($menu, $item);
         }
 
-        return view('site.index', array(
+        return view('site.gallery', array(
             'menu' => $menu,
             'pages' => $pages,
-            'profit' => $profit,
-            'advantage' => $advantage,
         ));
+
     }
 }

@@ -1,3 +1,4 @@
+<section class="modal-form" id="popup1">
 <div class="smart-form">
     <div class="form-header">
         <h4><i class="fa fa-comments"></i>Связаться</h4>
@@ -42,3 +43,4 @@
 
     </form>
 </div>
+</section>

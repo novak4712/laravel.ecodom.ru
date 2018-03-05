@@ -1,11 +1,11 @@
 @extends('layouts.site')
 
 @section('header')
-    @include('site.component.header')
+    @include('site.component.nav')
 @endsection
 
 @section('page_content')
-    @include('site.component.mainContent')
+    @include('site.component.gkContent')
 @endsection
 
 @section('footer')
@@ -13,15 +13,5 @@
 @endsection
 
 @section('forms')
-    @include('site.component.formContact')
-    @include('site.component.contactButton')
+    @include('site.component.formOrderGk')
 @endsection
-
-
-
-
-
-
-
-
-
