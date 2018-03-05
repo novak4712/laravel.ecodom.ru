@@ -5,7 +5,7 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gulp Project</title>
+    <title>ЭКОДОМ</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('app/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('app/css/flexslider.css') }}" type="text/css" media="screen"/>

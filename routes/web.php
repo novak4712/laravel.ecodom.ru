@@ -24,7 +24,11 @@ Route::group(['middleware' => 'web'], function () {
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     // admin
     Route::get('/', function () {
+        if (view()->exists('admin.index')){
+            $data = ['title' => 'Панель администратора'];
 
+            return view('admin.index', $data);
+        }
     });
     //admin/pages
     Route::group(['prefix' => 'pages'], function () {
@@ -33,7 +37,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
         //admin/pages/add
         Route::match(['get', 'post'], '/add', ['uses' => 'PagesAddController@execute', 'as' => 'pagesAdd']);
         //admin/edit/1
-        Route::match(['get', 'post', 'delete'], '/edit/{page}', ['uses' => 'PagesEditController@execute', 'as' => 'pagesEdit']);
+        Route::match(['get', 'post', 'delete'], '/edit/{page}',
+            ['uses' => 'PagesEditController@execute', 'as' => 'pagesEdit']);
     });
 
     Route::group(['prefix' => 'profit'], function () {
@@ -42,7 +47,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
         Route::match(['get', 'post'], '/add', ['uses' => 'ProfitAddController@execute', 'as' => 'profitAdd']);
 
-        Route::match(['get', 'post', 'delete'], '/edit/{profit}', ['uses' => 'ProfitEditController@execute', 'as' => 'profitEdit']);
+        Route::match(['get', 'post', 'delete'], '/edit/{profit}',
+            ['uses' => 'ProfitEditController@execute', 'as' => 'profitEdit']);
     });
 
     Route::group(['prefix' => 'advantage'], function () {
@@ -51,7 +57,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
         Route::match(['get', 'post'], '/add', ['uses' => 'AdvantageAddController@execute', 'as' => 'advantageAdd']);
 
-        Route::match(['get', 'post', 'delete'], '/edit/{advantage}', ['uses' => 'AdvantageEditController@execute', 'as' => 'advantageEdit']);
+        Route::match(['get', 'post', 'delete'], '/edit/{advantage}',
+            ['uses' => 'AdvantageEditController@execute', 'as' => 'advantageEdit']);
     });
 
     Route::group(['prefix' => 'gk'], function () {
