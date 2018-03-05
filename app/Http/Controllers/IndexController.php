@@ -13,7 +13,16 @@ class IndexController extends Controller
     //
     public function execute(Request $request)
     {
+        if ($request->isMethod('post')) {
+            $this->validate($request, [
+                'names' => 'required|max:255',
+                'email' => 'required|email',
+                'tel' => 'required',
+                'comment' => 'required'
+            ]);
 
+            dump($request);
+        }
         $pages = Page::all();
         $profit = Profit::all();
         $advantage = Advantage::all();

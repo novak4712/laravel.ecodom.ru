@@ -10,6 +10,19 @@ class TermopanelController extends Controller
     //
     public function execute(Request $request){
 
+        if ($request->isMethod('post')) {
+            $this->validate($request, [
+                'names_order' => 'required|max:255',
+                'email_order' => 'required|email',
+                'tel_order' => 'required',
+                'label_tp' => 'required|integer|min:1',
+                'count_tp' => 'required|integer|min:1'
+            ]);
+
+//            dump($request);
+            
+        }
+
         $pages = Page::all();
         $tp = Tp::all();
 
