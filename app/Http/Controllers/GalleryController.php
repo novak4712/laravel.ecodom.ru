@@ -12,6 +12,7 @@ class GalleryController extends Controller
         $pages = Page::all();
 
         $menu = array();
+
         foreach ($pages as $page) {
             $item = array('title' => $page->name, 'link' => $page->link);
             array_push($menu, $item);

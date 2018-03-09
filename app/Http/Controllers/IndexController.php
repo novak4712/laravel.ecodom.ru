@@ -21,7 +21,7 @@ class IndexController extends Controller
                 'comment' => 'required'
             ]);
 
-//            dump($request);
+            dump($request);
         }
         $pages = Page::all();
         $profit = Profit::all();

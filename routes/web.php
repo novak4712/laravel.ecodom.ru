@@ -13,7 +13,6 @@
 
 Route::group(['middleware' => 'web'], function () {
     Route::match(['get', 'post'], '/', ['uses' => 'IndexController@execute', 'as' => 'index']);
-    Route::redirect('/index', '/');
     Route::match(['get', 'post'], '/kamen', ['uses' => 'KamenController@execute', 'as' => 'kamen']);
     Route::match(['get', 'post'], '/termopanel', ['uses' => 'TermopanelController@execute', 'as' => 'termopanel']);
     Route::match(['get', 'post'], '/gallery', ['uses' => 'GalleryController@execute', 'as' => 'gallery']);
@@ -84,3 +83,4 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+

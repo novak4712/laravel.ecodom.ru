@@ -20,7 +20,7 @@ class KamenController extends Controller
                 'count_gk' => 'required|integer|min:1'
             ]);
 
-//            dump($request);
+            dump($request);
         }
 
 

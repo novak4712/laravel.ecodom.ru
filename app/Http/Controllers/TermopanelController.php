@@ -19,7 +19,7 @@ class TermopanelController extends Controller
                 'count_tp' => 'required|integer|min:1'
             ]);
 
-//            dump($request);
+            dump($request);
             
         }
 
