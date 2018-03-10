@@ -8,4 +8,5 @@ class Profit extends Model
 {
     //
     protected $table = 'profit';
+    protected $fillable = ['icon', 'text'];
 }

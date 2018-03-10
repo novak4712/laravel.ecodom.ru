@@ -8,4 +8,5 @@ class Advantage extends Model
 {
     //
     protected $table = 'advantage';
+    protected $fillable = ['name', 'text'];
 }

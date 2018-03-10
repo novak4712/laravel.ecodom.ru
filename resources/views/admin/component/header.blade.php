@@ -7,7 +7,7 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="{{ route('pages') }}">Страницы</a>
+            <a class="nav-item nav-link" href="{{ route('pages') }}">Страницы</a>
             <a class="nav-item nav-link" href="{{ route('profit') }}">Профит</a>
             <a class="nav-item nav-link" href="{{ route('advantage') }}">Преимущества</a>
             <a class="nav-item nav-link" href="{{ route('gk') }}">Гибкий камень</a>

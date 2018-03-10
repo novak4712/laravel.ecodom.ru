@@ -9,9 +9,9 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('app/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('app/css/main.css') }}" type="text/css"/>
+    <script src="//cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="{{ asset('app/js/modernizr.min.js') }}"></script>
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -26,7 +26,7 @@
         <div class="alert alert-danger">
             <ul>
                 @foreach($errors->all() as $error)
-                    <li>{{ $erorr }}</li>
+                    <li>{{ $error }}</li>
                 @endforeach
             </ul>
         </div>

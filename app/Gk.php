@@ -8,4 +8,5 @@ class Gk extends Model
 {
     //
     protected $table = 'gk';
+    protected $fillable = ['name', 'description', 'image', 'price', 'units'];
 }
