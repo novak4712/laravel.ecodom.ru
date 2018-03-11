@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Мар 05 2018 г., 17:40
+-- Время создания: Мар 11 2018 г., 10:59
 -- Версия сервера: 5.7.20
 -- Версия PHP: 7.0.26
 
@@ -69,7 +69,7 @@ CREATE TABLE `gk` (
 --
 
 INSERT INTO `gk` (`id`, `image`, `name`, `description`, `price`, `units`, `created_at`, `updated_at`) VALUES
-(1, 'gk_1.png', 'Гибкий камень №1', 'Ширина: 0,3 м</br> Длина: 0,6 м</br>Толщина: 1,5-2 мм</br>Упаковка: 3,6м<sup><small>2</small></sup> (20 листов)</br>', '899', '<p>за м<sup><small>2</small></sup></p>', NULL, NULL),
+(1, 'gk_1.png', 'Гибкий камень №1', '<p>Ширина: 0,3 м<br />\r\nДлина: 0,6 м<br />\r\nТолщина: 1,5-2 мм<br />\r\nУпаковка: 3,6м<small>2</small> (20 листов)</p>', '899', '<p>за м<sup><small>2</small></sup></p>', NULL, '2018-03-11 04:56:45'),
 (2, 'gk_2.png', 'Гибкий камень №2', 'Ширина: 0,3 м</br> Длина: 0,6 м</br>Толщина: 1,5-2 мм</br>Упаковка: 3,6м<sup><small>2</small></sup> (20 листов)</br>', '899', '<p>за м<sup><small>2</small></sup></p>', NULL, NULL),
 (3, 'gk_3.png', 'Гибкий камень №3', 'Ширина: 0,3 м</br> Длина: 0,6 м</br>Толщина: 1,5-2 мм</br>Упаковка: 3,6м<sup><small>2</small></sup> (20 листов)</br>', '899', '<p>за м<sup><small>2</small></sup></p>', NULL, NULL),
 (4, 'gk_4.png', 'Гибкий камень №4', 'Ширина: 0,3 м</br> Длина: 0,6 м</br>Толщина: 1,5-2 мм</br>Упаковка: 3,6м<sup><small>2</small></sup> (20 листов)</br>', '899', '<p>за м<sup><small>2</small></sup></p>', NULL, NULL),
@@ -124,7 +124,6 @@ CREATE TABLE `pages` (
 --
 
 INSERT INTO `pages` (`id`, `name`, `link`, `created_at`, `updated_at`) VALUES
-(1, 'Главная', 'index', NULL, NULL),
 (2, 'Гибкий камень', 'kamen', NULL, NULL),
 (3, 'Термопанели', 'termopanel', NULL, NULL),
 (4, 'Фотогалерея', 'gallery', NULL, NULL),
@@ -214,6 +213,13 @@ CREATE TABLE `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'novak4712', 'novak4803@gmail.com', '$2y$10$AH0OXc9YXypv847ro8gjiuJ0Yy6woIbq5XLMZe5BHnEdHRRT7SPV6', 'bJ9vD0CBYKvsSalOK965j6QsgjdVmK1aoUFdQTRIMMSfntOQuVvhVTFHq4xx', '2018-03-05 11:46:56', '2018-03-05 11:46:56');
 
 --
 -- Индексы сохранённых таблиц
@@ -306,13 +312,13 @@ ALTER TABLE `profit`
 -- AUTO_INCREMENT для таблицы `tp`
 --
 ALTER TABLE `tp`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
