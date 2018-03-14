@@ -42,6 +42,10 @@
                         <img src="{{ asset('app/img/productslide4.jpg') }}"/>
                         <p class="flex-caption">Гибкий камень: Текстурированный</p>
                     </li>
+                    <li>
+                        <img src="{{ asset('app/img/productslide5.jpg') }}"/>
+                        <p class="flex-caption">Термопанели</p>
+                    </li>
                 </ul>
             </div>
         </div>

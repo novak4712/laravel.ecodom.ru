@@ -18,12 +18,19 @@ $(document).ready(function () {
         $(popup_id).show();
         $('.overlay_form').show();
     };
-
+    var showImg = function () {
+        var popup_id = $('#' + $(this).attr("rel"));
+        var img_attr = $(this).attr("src");
+        $("#max_img").attr("src",img_attr);
+        $(popup_id).show();
+        $('.overlay_form').show();
+    };
     $('#popup__toggle').click(showForm);
     $('.cart_toggle').click(showForm);
+    $('.img_toggle').click(showImg);
 
     $('.overlay_form').click(function () {
-        $('.overlay_form, .modal-form').hide();
+        $('.overlay_form, .modal-form, .full_image').hide();
     });
 
 
@@ -62,13 +69,6 @@ $(document).ready(function () {
         hBlock.toggle("slow");
 
     });
-
-    new Photostack( document.getElementById( 'photostack-1' ), {
-        callback : function( item ) {
-            //console.log(item)
-        }
-    } );
-
 });
 
 

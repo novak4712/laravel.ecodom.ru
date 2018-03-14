@@ -162,7 +162,7 @@ body {
 }
 
 main {
-  background: url("../img/backkirpich.jpg") no-repeat fixed;
+  background: url("../img/backkirpich.jpg") fixed;
 }
 
 .fullscreen-bg {
@@ -223,7 +223,7 @@ main {
 
 .fullscreen-bg .overlay .container p {
   font-size: 2rem;
-  color: #F1370C;
+  color: #008838;
   width: 100%;
   margin: 10px;
 }
@@ -378,6 +378,7 @@ main {
   margin: 0 10px;
   position: relative;
   overflow: hidden;
+  border-bottom: 2px solid transparent;
   -webkit-border-radius: 5px;
           border-radius: 5px;
   -webkit-transition: .2s ease-in-out;
@@ -389,7 +390,7 @@ main {
 
 .menu .menu__links .menu__links-item:hover {
   color: #FFFFFF;
-  border-bottom: 2px solid #F1370C;
+  border-bottom: 2px solid #008838;
 }
 
 .menu .menu__links .menu__links-item:hover:before {
@@ -417,7 +418,7 @@ main {
 
 .menu .menu__links .menu__links-item-active {
   color: #FFFFFF;
-  border-bottom: 2px solid #F1370C;
+  border-bottom: 2px solid #008838;
 }
 
 .menu .menu__icon {
@@ -518,7 +519,7 @@ main {
   font-size: 3rem;
   text-align: center;
   padding-bottom: 50px;
-  color: #F1370C;
+  color: #008838;
 }
 
 .profit .items .item {
@@ -568,7 +569,7 @@ main {
   padding: 2%;
   left: 0;
   bottom: 0;
-  background: #F1370C;
+  background: #008838;
   color: #fff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
   font-size: 1.5rem;
@@ -580,7 +581,7 @@ main {
 }
 
 .flex-control-paging li a.flex-active {
-  background: #F1370C;
+  background: #008838;
 }
 
 .advantage {
@@ -593,7 +594,7 @@ main {
   font-size: 3rem;
   text-align: center;
   padding-bottom: 50px;
-  color: #F1370C;
+  color: #008838;
 }
 
 .advantage .items {
@@ -634,7 +635,7 @@ main {
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
-  border: 3px solid #F1370C;
+  border: 3px solid #008838;
   padding: 10px;
   margin-bottom: 25px;
   background: rgba(0, 0, 0, 0.6);
@@ -701,7 +702,7 @@ main {
 }
 
 .advantage .items .item .item_header button {
-  background: #F1370C;
+  background: #008838;
   font-size: 0.9rem;
   margin-top: 10px;
   height: 30px;
@@ -750,17 +751,68 @@ main {
 }
 
 .gallery {
-  width: 100%;
-  background: #FFFFFF;
-  padding-top: 100px;
+  padding-top: 150px;
+  padding-bottom: 50px;
 }
 
-svg.polaroid rect {
-  stroke: #F1370C;
+.gallery .items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-#photostack-1 nav span.current {
-  background: #F1370C;
+.gallery .items .item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: -webkit-calc(25% - 30px);
+  width: calc(25% - 30px);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.gallery .items .item:hover {
+  -webkit-transform: scale(1.025);
+      -ms-transform: scale(1.025);
+          transform: scale(1.025);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  -o-transition: transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.gallery .items .item img {
+  border: 3px solid #008838;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 10px 6px -6px #777;
+}
+
+.full_image {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  width: 50%;
+  height: 40%;
+  top: 15%;
+  left: 25%;
+  right: 25%;
+}
+
+.full_image img {
+  border: 3px solid #FFFFFF;
 }
 
 footer {
@@ -787,7 +839,7 @@ footer .cont_email {
 }
 
 footer .cont_email .email {
-  background: #F1370C;
+  background: #008838;
   color: #FFFFFF;
   font-size: 2rem;
   margin: 50px 0 30px 0;
@@ -852,7 +904,7 @@ footer .cooperation {
 }
 
 #popup__toggle .img-circle {
-  background-color: #F1370C;
+  background-color: #008838;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
 }
@@ -860,7 +912,7 @@ footer .cooperation {
 #popup__toggle .circlephone {
   box-sizing: content-box;
   -webkit-box-sizing: content-box;
-  border: 2px solid #D03B18;
+  border: 2px solid #008838;
   width: 150px;
   height: 150px;
   bottom: -25px;
@@ -881,7 +933,7 @@ footer .cooperation {
 #popup__toggle .circle-fill {
   box-sizing: content-box;
   -webkit-box-sizing: content-box;
-  background-color: #D03B18;
+  background-color: #008838;
   width: 100px;
   height: 100px;
   bottom: 0px;
@@ -1081,7 +1133,7 @@ footer .cooperation {
   z-index: 1000;
   width: 320px;
   height: 550px;
-  top: 15%;
+  top: 12%;
   left: 50%;
   margin-left: -160px;
 }
@@ -1096,8 +1148,8 @@ footer .cooperation {
 }
 
 .modal-form .smart-form .form-header {
-  background: #F1370C;
-  border-bottom: 2px solid #5f1605;
+  background: #008838;
+  border-bottom: 2px solid black;
   padding: 5% 0;
   font-size: 2rem;
   -webkit-border-radius: 7px;
@@ -1160,7 +1212,7 @@ footer .cooperation {
 }
 
 .modal-form .smart-form .form-body .form-section .prepend-icon:hover {
-  border: 1px solid #F1370C;
+  border: 1px solid #008838;
 }
 
 .modal-form .smart-form .form-body .form-section .prepend-icon input {
@@ -1189,11 +1241,11 @@ footer .cooperation {
 }
 
 .modal-form .smart-form .form-body .form-section .prepend-icon span.select_fa {
-  color: #F1370C;
+  color: #008838;
 }
 
 .modal-form .smart-form .form-body .form-section .select_input {
-  border: 1px solid #F1370C;
+  border: 1px solid #008838;
 }
 
 .modal-form .smart-form .form-footer {
@@ -1215,7 +1267,7 @@ footer .cooperation {
   width: 50%;
   height: 30px;
   margin: 20px;
-  background: #F1370C;
+  background: #008838;
   -webkit-border-radius: 7px;
           border-radius: 7px;
   color: #FFFFFF;
@@ -1259,7 +1311,7 @@ footer .cooperation {
   width: -webkit-calc(33.33333% - 30px);
   width: calc(33.33333% - 30px);
   background: rgba(255, 255, 255, 0.9);
-  border: 2px solid #F1370C;
+  border: 2px solid #008838;
   -webkit-border-radius: 10px;
           border-radius: 10px;
   margin-bottom: 30px;
@@ -1319,7 +1371,7 @@ footer .cooperation {
 .cart .items .item .cart_body .cart_text h6 {
   margin-bottom: 20px;
   text-align: center;
-  color: #F1370C;
+  color: #008838;
   font-size: 1.2rem;
 }
 
@@ -1332,11 +1384,11 @@ footer .cooperation {
 
 .cart .items .item .cart_body .cart_price p:first-child {
   font-size: 1.5rem;
-  color: #F1370C;
+  color: #008838;
 }
 
 .cart .items .item .cart_body .cart_price button {
-  background: #F1370C;
+  background: #008838;
   width: 80%;
   color: #FFFFFF;
   -webkit-border-radius: 5px;
@@ -1461,6 +1513,11 @@ footer .cooperation {
     font-size: 0.7rem;
   }
 
+  .gallery .items .item {
+    width: -webkit-calc(33.33333% - 30px);
+    width: calc(33.33333% - 30px);
+  }
+
   #popup__toggle {
     -webkit-transform: scale(0.8);
         -ms-transform: scale(0.8);
@@ -1533,6 +1590,11 @@ footer .cooperation {
     font-size: 1.6rem;
   }
 
+  .gallery .items .item {
+    width: -webkit-calc(50% - 30px);
+    width: calc(50% - 30px);
+  }
+
   #popup__toggle {
     -webkit-transform: scale(0.7);
         -ms-transform: scale(0.7);
@@ -1583,6 +1645,11 @@ footer .cooperation {
   }
 
   .advantage .items .item {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
+
+  .gallery .items .item {
     width: -webkit-calc(100% - 30px);
     width: calc(100% - 30px);
   }
