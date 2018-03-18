@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Page;
 use App\Profit;
 use App\Advantage;
+use Illuminate\Support\Facades\Mail;
 
 
 class IndexController extends Controller
@@ -14,15 +15,35 @@ class IndexController extends Controller
     public function execute(Request $request)
     {
         if ($request->isMethod('post')) {
+
+            $messages = [
+                'required' => "Поле :attribute обязательно к заполнению",
+                'email' => "Поле :attribute должно соответствовать email адресу",
+            ];
+
             $this->validate($request, [
                 'names' => 'required|max:255',
                 'email' => 'required|email',
                 'tel' => 'required',
                 'comment' => 'required'
-            ]);
+            ], $messages);
 
-            dump($request);
+            $data = $request->all();
+
+
+            $result = Mail::send('emails.mail', ['data'=>$data], function ($message) use ($data) {
+                $message->to('testlaravel4712@gmail.com')
+                    ->subject('Вопрос');
+                $message->from($data['email'], $data['names']);
+            });
+
+            if($result) {
+                return redirect()->route('index')->with('status', 'Письмо отправлено');
+            }
+
         }
+
+
         $pages = Page::all();
         $profit = Profit::all();
         $advantage = Advantage::all();
