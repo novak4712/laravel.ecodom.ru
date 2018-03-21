@@ -1,7 +1,9 @@
 <main>
+
     @if(isset($gk) && is_object($gk))
 
         <section class="cart container">
+
             <div class="items">
 
                 @foreach($gk as $k)

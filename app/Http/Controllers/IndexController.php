@@ -31,15 +31,14 @@ class IndexController extends Controller
             $data = $request->all();
 
 
-            $result = Mail::send('emails.mail', ['data'=>$data], function ($message) use ($data) {
-                $message->to('testlaravel4712@gmail.com')
+            Mail::send('emails.mail', ['data'=>$data], function ($message) use ($data) {
+                $message->to('eco_dom_nv@mail.ru')
                     ->subject('Вопрос');
                 $message->from($data['email'], $data['names']);
             });
 
-            if($result) {
-                return redirect()->route('index')->with('status', 'Письмо отправлено');
-            }
+            return redirect()->route('index')->with('status', 'Письмо отправлено');
+
 
         }
 

@@ -9,6 +9,7 @@
       background: url('../img/backvideo.jpg') center center / cover no-repeat;
     }
 
+
   video {
     position: absolute;
     top: 0;
@@ -37,6 +38,11 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      align-items: center;
+      @media (max-width:576px) {
+        padding-bottom: 10%;
+        padding-top: 10%;
+      }
       h1 {
         font-size: 4rem;
         width: 100%;
@@ -50,7 +56,9 @@
         }
         @media (max-width: 576px) {
           font-size: 1.2rem;
-          margin-bottom: 17%;
+        }
+        @media (max-width: 360px) {
+          font-size: 1rem;
         }
       }
       p {
@@ -65,7 +73,7 @@
         @media (max-width: 992px) {
           font-size: 1rem;
         }
-        @media (max-width: 576px) {
+        @media (max-width: 430px) {
          display: none;
         }
       }
@@ -80,7 +88,7 @@
           font-size: 0.7rem;
           margin-top: 5%;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 576px) {
           display: none;
         }
       }

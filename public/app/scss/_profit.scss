@@ -13,6 +13,7 @@
       color: $main-red;
       @include md(font-size, 2rem);
       @include sm(font-size, 1.6rem);
+      @include xs(font-size, 1.3rem);
 
     }
     .item {
@@ -23,6 +24,8 @@
       text-align: center;
       img {
         margin: 20px;
+        @include sm(transform, scale(0.9));
+        @include xs(transform, scale(0.8));
       }
       p {
         font-size: 1.4rem;
@@ -32,6 +35,8 @@
         border-radius: 7px;
         @include lg(font-size, 1.5rem);
         @include md(font-size, 1.2rem);
+        @include sm(font-size, 1rem);
+        @include xs(font-size, 0.9rem);
       }
     }
   }

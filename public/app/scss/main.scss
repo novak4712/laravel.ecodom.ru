@@ -1,19 +1,47 @@
 @import "smart-grid";
 @import "config";
+
 @include reset();
 
 .debug {
-    display: block;
-    @include debug(rgba(0, 0, 0, 0.4), 0);
+  display: block;
+  @include debug(rgba(0, 0, 0, 0.4), 0);
 }
-.container{
-	@include wrapper();
+
+.container {
+  @include wrapper();
 }
-body{
+
+.alert {
+  padding: .75rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}
+
+.alert-danger {
+  background-color: #f2dede;
+  border-color: #ebcccc;
+  color: #a94442;
+}
+
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d0e9c6;
+  color: #3c763d;
+}
+.messages{
+  position: fixed;
+  //width: 100%;
+  top: 100px;
+  left: 10px;
+  right: 10px;
+}
+body {
   font-family: $font-stack;
   font-size: $f_s;
 }
-main{
+
+main {
   background: url("../img/backkirpich.jpg") fixed;
 }
 

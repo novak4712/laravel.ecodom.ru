@@ -11,7 +11,7 @@
 |
 */
 
-Route::group(['middleware' => 'web'], function () {
+Route::group([], function () {
     Route::match(['get', 'post'], '/', ['uses' => 'IndexController@execute', 'as' => 'index']);
     Route::match(['get', 'post'], '/kamen', ['uses' => 'KamenController@execute', 'as' => 'kamen']);
     Route::match(['get', 'post'], '/termopanel', ['uses' => 'TermopanelController@execute', 'as' => 'termopanel']);

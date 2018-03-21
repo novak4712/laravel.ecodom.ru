@@ -9,6 +9,7 @@
     color: $main-red;
     @include md(font-size, 2rem);
     @include sm(font-size, 1.6rem);
+    @include xs(font-size, 1.3rem);
   }
   .items {
     @include row-flex();

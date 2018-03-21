@@ -2,6 +2,7 @@
     @if(isset($tp) && is_object($tp))
 
         <section class="cart container">
+
             <div class="items">
 
                 @foreach($tp as $k)

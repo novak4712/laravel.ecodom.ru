@@ -27,12 +27,23 @@
   display: none;
   position: fixed;
   z-index: 1000;
-  width:50%;
+  width:54%;
   height: 40%;
   top: 15%;
-  left:25%;
-  right: 25%;
-  //margin-left:-160px;
+  left:23%;
+  right: 23%;
+  @media (max-width: 1200px) {
+    width:85%;
+    left:7.5%;
+    right: 17.5%;
+  }
+  @media (max-width: 992px) {
+    top: 5%;
+    width:85%;
+    left:7.5%;
+    right: 17.5%;
+  }
+
   img{
     border: 3px solid $white;
   }

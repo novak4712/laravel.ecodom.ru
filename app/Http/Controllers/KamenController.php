@@ -10,12 +10,15 @@ use Illuminate\Support\Facades\Mail;
 class KamenController extends Controller
 {
     //
-    public function execute(Request $request){
+    public function execute(Request $request)
+    {
 
-        $messages =[
+        $messages = [
             'required' => "Поле :attribute обязательно к заполнению",
             'email' => "Поле :attribute должно соответствовать email адресу",
-            'integer' => "Поле :attribute должно содержать числовое значение"
+            'integer' => "Поле :attribute должно содержать числовое значение",
+            'min' => "Поле :attribute минимальное значение 1 значение",
+            'max' => "Поле :attribute максимальное значение 10",
         ];
 
         if ($request->isMethod('post')) {
@@ -23,24 +26,21 @@ class KamenController extends Controller
                 'names_order' => 'required|max:255',
                 'email_order' => 'required|email',
                 'tel_order' => 'required',
-                'label_gk' => 'required|integer',
+                'label_gk' => 'required|integer|min:1|max:10',
                 'count_gk' => 'required|integer|min:1'
             ], $messages);
 
             $data = $request->all();
 
-            $result = Mail::send('emails.orderGkmail', ['data'=>$data], function ($message) use ($data) {
-                $message->to('testlaravel4712@gmail.com')
+            Mail::send('emails.orderGkmail', ['data' => $data], function ($message) use ($data) {
+                $message->to('eco_dom_nv@mail.ru')
                     ->subject('Заказ Гибкого камня');
                 $message->from($data['email_order'], $data['names_order']);
             });
 
-            if($result) {
-                return redirect()->route('kamen')->with('status', 'Заказ отправлен');
-            }
+            return redirect()->route('kamen')->with('status', 'Заказ отправлен');
+
         }
-
-
 
         $pages = Page::all();
         $gk = Gk::all();

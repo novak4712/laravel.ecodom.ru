@@ -1,3 +1,4 @@
+
 <header id="index">
     @if(isset($menu))
 
@@ -19,13 +20,28 @@
                     <a class="menu__links-item" href="{{ $item['link'] }}">{{ $item['title'] }}</a>
 
                 @endforeach
-
             </div>
         </nav>
-
     @endif
+        <section class="messages">
+            @if(session('status'))
+                <div class="alert alert-success">
+                    {{ session('status') }}
+                </div>
+            @endif
 
+            @if(count($errors)>0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+        </section>
     <section class="fullscreen-bg">
+
         <div class="overlay">
             <div class="container">
                 <h1>Гибкий камень и термопанели</h1>
@@ -40,7 +56,7 @@
 
             </div>
         </div>
-        <video loop muted autoplay poster="{{ asset('app/media/backvideo.jpg') }}" class="fullscreen-bg__video">
+        <video loop muted autoplay poster="{{ asset('app/img/backvideo.jpg') }}" class="fullscreen-bg__video">
             <source src="{{ asset('app/media/backvideo.mp4') }}" type="video/mp4">
             <source src="{{ asset('app/media/backvideo.webm') }}" type="video/webm">
             <source src="{{ asset('app/media/backvideo.avi') }}" type="video/avi">

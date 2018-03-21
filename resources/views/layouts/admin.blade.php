@@ -20,8 +20,6 @@
 
 <body>
 <header id="header_wrapper">
-    @yield('header')
-
     @if(count($errors) > 0)
         <div class="alert alert-danger">
             <ul>
@@ -37,7 +35,7 @@
             {{ session('status') }}
         </div>
     @endif
-
+        @yield('header')
 </header>
 @yield('content')
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

@@ -1,9 +1,4 @@
-@extends('layouts.admin')
-
-
-@section('header')
-    @include('admin.component.header')
-@endsection
+@extends('layouts.app')
 
 @section('content')
     @include('admin.component.gkEditContent')

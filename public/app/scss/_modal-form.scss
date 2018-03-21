@@ -7,6 +7,8 @@
   top:12%;
   left:50%;
   margin-left:-160px;
+  @include sm(transform, scale(0.8));
+  @include xs(transform, scale(0.7));
   .smart-form {
     background: $white;
     border-radius: 7px;
