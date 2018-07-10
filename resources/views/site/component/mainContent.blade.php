@@ -9,7 +9,7 @@
                     @foreach($profit as $k)
 
                         <div class="item">
-                            {!! Html::image('app/img/'.$k->icon) !!}
+                            {!! Html::image('app/img/'.$k->icon, 'image') !!}
                             {!! $k->text !!}
                         </div>
 
@@ -21,40 +21,33 @@
 
     @endif
 
-    <section class="slider">
-        <h3>Наша продукция</h3>
-        <div class="slider_container">
-            <div class="flexslider">
-                <ul class="slides">
-                    <li>
-                        <img src="{{ asset('app/img/productslide1.jpg') }}"/>
-                        <p class="flex-caption">Гибкий кирпич</p>
-                    </li>
-                    <li>
-                        <img src="{{ asset('app/img/productslide2.jpg') }}"/>
-                        <p class="flex-caption">Гибкие обои</p>
-                    </li>
-                    <li>
-                        <img src="{{ asset('app/img/productslide3.jpg') }}"/>
-                        <p class="flex-caption">Гибкий камень: Плитка</p>
-                    </li>
-                    <li>
-                        <img src="{{ asset('app/img/productslide4.jpg') }}"/>
-                        <p class="flex-caption">Гибкий камень: Текстурированный</p>
-                    </li>
-                    <li>
-                        <img src="{{ asset('app/img/productslide5.jpg') }}"/>
-                        <p class="flex-caption">Термопанели</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="slider_color">
-                <p>В нашем каталоге вы найдете более 8 различных расцветок и текстур рисунка.</p>
-                <p>Не подходит что то из наших образцов, мы совместно с вами разработаем и внедрим «ваш» цвет.</p>
-                <p>Палитра и сам рисунок может быть очень разнообразными.</p>
-            </div>
-        </div>
-    </section>
+        @if(isset($slider) && is_object($slider))
+
+            <section class="slider">
+                <h3>Наша продукция</h3>
+                <div class="slider_container">
+                    <div class="flexslider">
+                        <ul class="slides">
+                            @foreach($slider as $img)
+
+                                <li>
+                                    {!! Html::image('app/img/'.$img->image) !!}
+                                    <p class="flex-caption">{!! $img->title !!}</p>
+                                </li>
+
+                            @endforeach
+                        </ul>
+                    </div>
+                    <div class="slider_color">
+                        <p>В нашем каталоге вы найдете более 8 различных расцветок и текстур рисунка.</p>
+                        <p>Не подходит что то из наших образцов, мы совместно с вами разработаем и внедрим «ваш» цвет.</p>
+                        <p>Палитра и сам рисунок может быть очень разнообразными.</p>
+                    </div>
+                </div>
+            </section>
+
+        @endif
+
 
     @if(isset($advantage) && is_object($advantage))
 

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Page;
 use App\Profit;
 use App\Advantage;
+use App\Slider;
+use App\Field;
 use Illuminate\Support\Facades\Mail;
 
 
@@ -44,8 +46,11 @@ class IndexController extends Controller
 
 
         $pages = Page::all();
+        $slider = Slider::all();
+        $fields = Field::find(1);
         $profit = Profit::all();
         $advantage = Advantage::all();
+        $meta= Page::find(1);
 
         $menu = array();
         foreach ($pages as $page) {
@@ -53,11 +58,14 @@ class IndexController extends Controller
             array_push($menu, $item);
         }
 
-        return view('site.index', array(
+        return view('Site.index', array(
             'menu' => $menu,
             'pages' => $pages,
             'profit' => $profit,
             'advantage' => $advantage,
+            'meta' => $meta,
+            'slider' => $slider,
+            'fields' => $fields,
         ));
     }
 }

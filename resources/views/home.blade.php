@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+    <?php $title = 'Панель администратора'?>
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">

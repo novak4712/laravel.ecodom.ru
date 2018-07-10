@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Page;
 use App\Gk;
 use Illuminate\Support\Facades\Mail;
-
+use App\Field;
 class KamenController extends Controller
 {
     //
@@ -44,6 +44,8 @@ class KamenController extends Controller
 
         $pages = Page::all();
         $gk = Gk::all();
+        $meta= Page::find(2);
+        $fields = Field::find(1);
 
         $menu = array();
         foreach ($pages as $page) {
@@ -51,10 +53,12 @@ class KamenController extends Controller
             array_push($menu, $item);
         }
 
-        return view('site.kamen', array(
+        return view('Site.kamen', array(
             'menu' => $menu,
             'pages' => $pages,
             'gk' => $gk,
+            'meta' => $meta,
+            'fields' => $fields,
         ));
 
     }

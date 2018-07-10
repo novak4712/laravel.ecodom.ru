@@ -1,8 +1,7 @@
 @extends('layouts.site')
 
 @section('style_gallery')
-    <link rel="stylesheet" href="{{ asset('app/css/normalize.css') }}" type="text/css"/>
-    <link rel="stylesheet" href="{{ asset('app/css/demo.css') }}" type="text/css"/>
+
 @endsection
 
 @section('header')

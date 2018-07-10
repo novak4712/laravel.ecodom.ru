@@ -11,7 +11,7 @@
     <div class="form-group row align-items-center">
         {!! Form::label('text', 'Текст:', ['class' => 'col-1 control-label']) !!}
         <div class="col-11">
-            {!! Form::textarea('text', old('text'), ['id' => 'editor1', 'class' => 'form-control', 'placeholder' => 'Введите текст']) !!}
+            {!! Form::textarea('text', old('text'), ['id' => 'editor', 'class' => 'form-control', 'placeholder' => 'Введите текст']) !!}
         </div>
     </div>
 
@@ -23,6 +23,8 @@
 
     {!! Form::close() !!}
     <script>
-        CKEDITOR.replace( 'editor1' );
+        // Replace the <textarea id="editor1"> with a CKEditor
+        // instance, using default configuration.
+        CKEDITOR.replace( 'editor' );
     </script>
 </div>

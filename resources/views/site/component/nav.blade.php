@@ -30,7 +30,7 @@
             </div>
 
             <div class="menu__links">
-                <a class="menu__links-item" href="{{ route('index') }}">Главная</a>
+
                 @foreach($menu as $item)
 
                     <a class="menu__links-item" href="{{ $item['link'] }}">{{ $item['title'] }}</a>

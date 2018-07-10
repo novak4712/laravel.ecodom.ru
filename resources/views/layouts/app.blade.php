@@ -8,10 +8,14 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Экодом') }}</title>
+    <title>ЭКОДОМ: Панель администратора</title>
 
     <!-- Styles -->
+    <link rel="stylesheet" href="{{ asset('app/css/main.css') }}" type="text/css"/>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="//cdn.ckeditor.com/4.10.0/standard/ckeditor.js"></script>
 </head>
 <body>
     <div id="app">
@@ -42,11 +46,6 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
-                        <li> <a class="nav-item nav-link" href="{{ route('pages') }}">Страницы</a></li>
-                        <li><a class="nav-item nav-link" href="{{ route('profit') }}">Профит</a></li>
-                        <li><a class="nav-item nav-link" href="{{ route('advantage') }}">Преимущества</a></li>
-                        <li><a class="nav-item nav-link" href="{{ route('gk') }}">Гибкий камень</a></li>
-                        <li> <a class="nav-item nav-link" href="{{ route('tp') }}">Термопанели</a></li>
                         @guest
                             <li><a href="{{ route('login') }}">Login</a></li>
                         @else
@@ -74,7 +73,12 @@
                 </div>
             </div>
         </nav>
-        @yield('header')
+        <div class="container">
+            @guest
+            @else
+                <h2 class="admin_title" style="text-align: center;">{{ $title }}</h2>
+            @endguest
+        </div>
 
         @if(count($errors) > 0)
             <div class="alert alert-danger">
@@ -91,10 +95,37 @@
                 {{ session('status') }}
             </div>
         @endif
-        @yield('content')
+
+    </div>
+    <div class="container">
+        <div class="row">
+            @guest
+            @else
+            <div class="col-md-2">
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="//public/admin">Главная</a></li>
+                    <li><a href="{{ route('pages') }}">Страницы</a></li>
+                    <li><a  href="{{ route('profit') }}">Профит</a></li>
+                    <li><a  href="{{ route('advantage') }}">Преимущества</a></li>
+                    <li><a  href="{{ route('gk') }}">Гибкий камень</a></li>
+                    <li><a  href="{{ route('tp') }}">Термопанели</a></li>
+                    <li><a  href="{{ route('slider') }}">Слайдер главная</a></li>
+                    <li><a  href="{{ route('foto') }}">Фотогалерея</a></li>
+                    <li><a  href="{{ route('field') }}">Логотип и Контакты</a></li>
+                </ul>
+            </div>
+            @endguest
+            <div class="col-md-10">
+                @yield('content')
+            </div>
+        </div>
     </div>
 
+
+
+    <footer style="margin-top: 100px;">
+
+    </footer>
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

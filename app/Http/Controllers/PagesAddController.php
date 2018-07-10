@@ -21,7 +21,9 @@ class PagesAddController extends Controller
 
             $validator = Validator::make($input, [
                 'name' => 'required|max:255',
-                'link' => 'required|unique:pages|max:255'
+                'link' => 'required|unique:pages|max:255',
+                'title' => 'required|max:255',
+                'description' => 'required|max:255',
             ], $messages);
 
             if ($validator->fails()) {

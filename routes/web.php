@@ -77,6 +77,30 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
         Route::match(['get', 'post', 'delete'], '/edit/{tp}', ['uses' => 'TpEditController@execute', 'as' => 'tpEdit']);
     });
+    Route::group(['prefix' => 'slider'], function () {
+
+        Route::get('/', ['uses' => 'SliderController@execute', 'as' => 'slider']);
+
+        Route::match(['get', 'post'], '/add', ['uses' => 'SliderAddController@execute', 'as' => 'sliderAdd']);
+
+        Route::match(['get', 'post', 'delete'], '/edit/{slider}', ['uses' => 'SliderEditController@execute', 'as' => 'sliderEdit']);
+    });
+    Route::group(['prefix' => 'foto'], function () {
+
+        Route::get('/', ['uses' => 'FotoController@execute', 'as' => 'foto']);
+
+        Route::match(['get', 'post'], '/add', ['uses' => 'FotoAddController@execute', 'as' => 'fotoAdd']);
+
+        Route::match(['get', 'post', 'delete'], '/edit/{foto}', ['uses' => 'FotoEditController@execute', 'as' => 'fotoEdit']);
+    });
+    Route::group(['prefix' => 'field'], function () {
+
+        Route::get('/', ['uses' => 'FieldController@execute', 'as' => 'field']);
+
+        Route::match(['get', 'post'], '/add', ['uses' => 'FieldAddController@execute', 'as' => 'fieldAdd']);
+
+        Route::match(['get', 'post', 'delete'], '/edit/{field}', ['uses' => 'FieldEditController@execute', 'as' => 'fieldEdit']);
+    });
 
 });
 

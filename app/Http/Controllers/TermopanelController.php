@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Page;
 use App\Tp;
 use Illuminate\Support\Facades\Mail;
+use App\Field;
 class TermopanelController extends Controller
 {
     //
@@ -44,6 +45,8 @@ class TermopanelController extends Controller
 
         $pages = Page::all();
         $tp = Tp::all();
+        $meta= Page::find(3);
+        $fields = Field::find(1);
 
         $menu = array();
         foreach ($pages as $page) {
@@ -51,10 +54,12 @@ class TermopanelController extends Controller
             array_push($menu, $item);
         }
 
-        return view('site.termopanel', array(
+        return view('Site.termopanel', array(
             'menu' => $menu,
             'pages' => $pages,
             'tp' => $tp,
+            'meta' => $meta,
+            'fields' => $fields,
         ));
 
     }
